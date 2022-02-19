@@ -16,7 +16,7 @@ def main(args):
     linedImg0 = detect.method0(img)
 
     # save images
-    cv.imwrite(filename + "-0." + filetype, linedImg0)
+    cv.imwrite(filename + "." + filetype, linedImg0)
 
 
     return

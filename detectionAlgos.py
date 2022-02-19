@@ -87,7 +87,6 @@ def method0(img):
     ncols = mask.shape[1]
     # for some reason: the rows and columns are swapped which makes things kinds of weird
     vertices = np.array([[(int(ncols//2 - 20),int(nrows//2) + 20), (0,nrows), (ncols,nrows), (int(ncols//2 + 20),int(nrows//2)  + 20)]], dtype=np.int32)
-    print(vertices.shape)
     mask = cv.fillPoly(mask, vertices, 255)
     maskedEdges = cv.bitwise_and(edges.astype(np.uint8), mask.astype(np.uint8))
     # cv.imshow("masked image", maskedEdges)
